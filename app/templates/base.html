@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    {% block linkCss %}{%endblock%}
+</head>
+
+<body>
+    <header>
+        <a class="baseA" href="/">Главная</a>
+        <a class="baseA" href="/about">О нас</a>
+        <a class="baseA" href="/contact">Контакты</a>
+
+    </header>
+    <main>
+        {% block content %}{%endblock%}
+
+
+    </main>
+
+    <footer>
+        <p class="footerP">&copy 2025 Eternum company</p>
+    </footer>
+
+</body>
+
+</html>
