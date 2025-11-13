@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block title %}Eternum company{% endblock %}
+{%block linkCss%}
+<link rel="stylesheet" href="{{url_for('static',filename='css/styleIndex.css')}}">{%endblock%}
 
 
 {% block content %}
@@ -8,6 +10,6 @@
         <h3 class="mainH3">Добро пожаловать в Eternum</h3>
         <p class="mainP">Eternum. Решения для вечно меняющегося мира. Ваши технологии навсегда. Создаем IT-решения, которые
             работают на перспективу.</p>
-        <img src="/app/static/img/logo.jpg" alt="Лого компании" class="mainImg">
+        <img src="{{url_for('static',filename='img/logo.jpg')}}" alt="Лого компании" class="mainImg">
     </div>
 {% endblock %}
